@@ -1,15 +1,15 @@
+/*
+* Required for jQuery
+* Version: 1.0
+* Usage:
+*  jQuery('form.element').required()
+*  jQuery('form.element').required({
+*     message: "Oops, there's something wrong. Check it out.",
+*    item_message: "Oops, you didn't fill this field"
+*  })
+*
+*/
 (function(){
-	/*
-	* Required for jQuery
-	* Version: 1.0
-	* Usage:
-	*	jQuery('form.element').required()
-	*	jQuery('form.element').required({
-	*		message: "Oops, there's something wrong. Check it out.",
-	*		item_message: "Oops, you didn't fill this field"
-	*	})
-	*
-	*/
 	
 	$.fn.required = function(options){
 		
