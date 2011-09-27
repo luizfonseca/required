@@ -2,12 +2,12 @@
 
 ## Usage
 
-- First, download it.
+- First, download it (and the jQuery plugin, derp).
 
 - Put it in your header or after the body tag
 
    ```javascript
-    <script src="./src/jquery.required"></script>
+    <script src="./src/jquery.required" type="text/javascript"></script>
    ```
 
 - Bla bla bla
@@ -23,7 +23,7 @@
   ```javascript
     $('form.your_form_dude').required({
        header: "Here goes an header, like an H3"
-       message: "Which message do you want after the element name, sir?"
+       message: "Which message do you want after the element name, sir? Can be any element!!11"
     });
   ```
 
