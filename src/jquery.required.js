@@ -13,7 +13,9 @@
 
 	$.fn.required = function(options)
 	{
-		var data = {}, error = [], error_list = '';
+		var data = {}
+		var error = []
+		var error_list = '';
 		
 		var options = $.extend(
 		{
@@ -30,24 +32,31 @@
 			$('input:not(:submit)', $(this)).each(function()
 			{
 				if ( $(this).hasClass('required') && $(this).val() === '')
+				{
 					error.push( $(this).siblings('label').attr('for', $(this).attr('name')).html() );
+				}
 			});
 			
 			if ( error.length > 0 ) 
 			{
-				error_list += "<h3> " + options.header + "</h3>";
+				var error_list = '';
+				if (options.header != '')
+				{
+					error_list += "<h3> " + options.header + "</h3>"; 
+				}
 				error_list += "<ul>";
 			
-				for ( i = 0, l = error.length; i <= l; i++) 
+				for ( counter = 0, limit = error.length; counter <= limit; counter++) 
 				{
-					if (error[i] != undefined || error[i] != null)
+					if (error[counter] != undefined || error[counter] != null)
 					{
-						error_list += "<li><em> " + error[i] + "</em> " + options.message + " </li>" ;
-						//console.log(error[i]);
+						error_list += "<li><em> " + error[counter] + "</em> " + options.message + " </li>" ;
+						//console.log(error[counter]);
 					}
 				}
 				
 				error_list += "</ul>";
+				error = []
 			
 				$('#message_overflow').fadeIn();
 				$('#message_from_required').empty().html(error_list);
@@ -56,7 +65,7 @@
 				//console.log (error_list);
 			}
 			else options.callback();
-			$('#message_close_required').click(function(){ $('#message_overflow').fadeOut(); error_list = ''});
+			$('#message_close_required').click(function(){ $('#message_overflow').fadeOut(); });
 			
 		});
 	}
