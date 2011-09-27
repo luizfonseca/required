@@ -46,11 +46,11 @@
 				}
 				error_list += "<ul>";
 			
-				for ( counter = 0, limit = error.length; counter <= limit; counter++) 
+				for (msg in error) 
 				{
-					if (error[counter] != undefined || error[counter] != null)
+					if (error[msg] != undefined || error[msg] != null)
 					{
-						error_list += "<li><em> " + error[counter] + "</em> " + options.message + " </li>" ;
+						error_list += "<li><em> " + error[msg] + "</em> " + options.message + " </li>" ;
 						//console.log(error[counter]);
 					}
 				}
