@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>The Awesome Required Sample</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript"> 
+      google.load('jquery', '1.6.1'); //stealing this shit from google, heh
+    </script>
+    <script type="text/javascript" src="../src/jquery.required.js"></script>
+    
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function(){
+        $('form.send_me').required(); //this will prevent the form from being sent, you should use a callback then.
+        
+      });
+    </script>
+    
+  </head>
+
+  <body>
+    
+    <!-- Probably I'll put this directly in the JS file... but, in fact; I do like the backwards way. See style.css now. -->
+    <div id="message_overflow">
+      <div id="message_from_required"></div>
+      <div id="message_close_required">close</div>
+    </div>
+    
+    
+    <section id="sample_dude">
+      <form action="some_url" class="send_me" method="post" accept-charset="utf-8">
+        
+        <label for="text_field">Text Field</label>
+        <input type="text" name="text_field" value="" class="required"/> <!-- here goes the magic-->
+        
+        <label for="another_field">Another Field</label>
+        <input type="text" name="another_field" value="" class="required"/> <!-- here goes the magic-->
+        <label>Radio button yeah yeah
+           <input type="radio" class="required" name="radio" value="1"/> <!-- :O it works with radio buttons too! -->
+        </label>
+        
+        <p><input type="submit" value="Continue &rarr;"></p>
+      </form>
+      
+    </section>
+  </body>
+
+
+</html>
