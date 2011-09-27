@@ -4,7 +4,7 @@
 
 - First, download it.
 
-- Put it in your header or after the </body> tag;
+- Put it in your header or after the body tag;
    ```
     <script src="./src/jquery.required"></script>
    ```
