@@ -25,10 +25,8 @@
 			
 		}, options);
 		
-		$(this).submit(function(e)
-		{
-			e.preventDefault(); 
-			
+		$(this).each(function()
+		{			
 			$('input:not(:submit)', $(this)).each(function()
 			{
 				if ( $(this).hasClass('required') && $(this).val() === '')
